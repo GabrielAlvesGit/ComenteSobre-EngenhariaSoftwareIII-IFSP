@@ -1,6 +1,7 @@
 # Ignorar arquivos gerados automaticamente
 .vscode/
 __pycache__/
+*.code-workspace
 
 # Ignorar arquivos de ambiente virtual
 venv/
@@ -11,6 +12,22 @@ ENV/
 *.pyc
 *.pyo
 *.pyd
+__pycache__/
+*.py[cod]
+*$py.class
 
 # Ignorar arquivos de registro
 *.log
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+media
+
+# Environment files
+.env
+.venv/
