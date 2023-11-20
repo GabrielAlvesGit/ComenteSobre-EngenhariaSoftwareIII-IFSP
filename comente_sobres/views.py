@@ -1,5 +1,9 @@
 from django.shortcuts import render
 
-def index(request):
+def home(request):
     """Página principal do Comente Sobre."""
-    return render(request, 'index.html')
+    return render(request, 'home.html')
+
+def principal(request):
+    """Página principal do Comente Sobre."""
+    return render(request, 'home.html')
