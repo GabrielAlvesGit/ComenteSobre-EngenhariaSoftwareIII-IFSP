@@ -9,4 +9,4 @@ class Topico(models.Model):
 
     def __str__(self):
         """Devolve uma representação em string do modelo."""
-        return self.text
+        return self.name

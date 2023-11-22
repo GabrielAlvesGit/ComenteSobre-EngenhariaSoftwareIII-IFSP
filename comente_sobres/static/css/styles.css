@@ -1,0 +1,86 @@
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333333;
+}
+
+p {
+    color: #666666;
+    background-color: #ffffff;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+p:hover {
+    background-color: #f0f0f0;
+}
+
+.erro-text {
+    color: red;
+    font-weight: bold;
+}
+
+.success-text {
+    color: green;
+    font-weight: bold;
+}
+
+.msg-result {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.btn-result {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.btn-result:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.btn-search {
+    background-color: purple; /* Roxo */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Reduzir o padding para tornar o botão um pouco menor */
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Mudar para block para ocupar toda a largura disponível */
+    font-size: 14px; /* Reduzir o tamanho da fonte */
+    margin: 10px 0; /* Aumentar a margem vertical e remover a margem horizontal */
+    cursor: pointer;
+    transition-duration: 0.4s;
+    float: right;
+}
+
+.btn-search:hover {
+    background-color: #800080; /* Mudar a cor de fundo para um roxo mais escuro ao passar o mouse */
+    color: white;
+    border: 2px solid black;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
