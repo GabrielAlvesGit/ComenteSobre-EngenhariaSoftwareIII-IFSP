@@ -24,6 +24,11 @@ p:hover {
     font-weight: bold;
 }
 
+.info-text {
+    color: gray;
+    font-weight: bold;
+}
+
 .success-text {
     color: green;
     font-weight: bold;
@@ -41,7 +46,6 @@ p:hover {
 
 .btn-result {
     background-color: #4CAF50; /* Verde */
-    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -51,12 +55,14 @@ p:hover {
     margin: 4px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
+    border: 2px solid #4CAF50;
 }
 
 .btn-result:hover {
     background-color: white; 
-    color: black; 
+    color: black;
     border: 2px solid #4CAF50;
+    
 }
 
 .btn-search {
@@ -80,7 +86,35 @@ p:hover {
     border: 2px solid black;
 }
 
+.btn-create {
+    background-color: purple; /* Roxo */
+    border: none;
+    color: white;
+    padding: 10px 20px; /* Reduzir o padding para tornar o botão um pouco menor */
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Mudar para block para ocupar toda a largura disponível */
+    font-size: 14px; /* Reduzir o tamanho da fonte */
+    margin: 10px 0; /* Aumentar a margem vertical e remover a margem horizontal */
+    cursor: pointer;
+    transition-duration: 0.4s;
+    float: right;
+}
+
+.btn-create:hover {
+    background-color: #800080; /* Mudar a cor de fundo para um roxo mais escuro ao passar o mouse */
+    color: white;
+    border: 2px solid black;
+}
+
 ul {
-    list-style-type: none;
-    padding-left: 0;
+    max-height: 600px; /* Ajuste este valor de acordo com suas necessidades */
+    overflow-y: auto;
+}
+
+.creator-name {
+    color: #333;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: bold;
 }

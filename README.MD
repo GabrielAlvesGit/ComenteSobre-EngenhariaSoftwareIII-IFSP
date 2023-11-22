@@ -10,7 +10,7 @@ pip install -r requirements.txt
 cs_env\pyvenv.cfg
 ```
 
-## Ativar Docker
+## Ativar ambiente
 
 ```bash
 cs_env\Scripts\activate

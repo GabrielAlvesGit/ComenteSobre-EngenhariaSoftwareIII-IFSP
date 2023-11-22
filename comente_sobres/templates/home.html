@@ -15,9 +15,14 @@
 
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
 
-
     {% if topico %}
     <p>{{topico}}</p>
+    {% endif %}
+
+    {% if msg %}
+    <div class="msg-result">
+        <p class="success-text">{{msg}}</p>
+    </div>
     {% endif %}
 
 </body>
