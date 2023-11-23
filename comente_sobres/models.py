@@ -25,4 +25,4 @@ class Comentario(models.Model):
     id_topico = models.ForeignKey(Topico, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.valor
+        return self.texto

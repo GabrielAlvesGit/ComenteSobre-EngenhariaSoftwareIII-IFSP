@@ -19,9 +19,8 @@ class HomePageView(View):
         if topico == None:
             return render(request, HOME_TEMPLATE)
         
-        comentarios = get_comentarios(topico.id)
-        print(comentarios)
-        context = {'topico': topico, 'comentarios': comentarios} 
+        comentarios = get_comentarios(topico)
+        context = {'topico': topico, 'comentarios': comentarios}
         return render(request, HOME_TEMPLATE, context)
     
     def post(self, request):
@@ -41,9 +40,6 @@ class SearchPageView(View):
 
             # Select
             topicos: list[Topico] = get_topicos(topico)
-
-            for topico in topicos:
-                print (topico.name)
 
             # Preenchimento do contexto
             context = {'topicos': topicos, 'quantidade': len(topicos)}
@@ -74,10 +70,11 @@ def get_topicos(self) -> list[Topico]:
 
 def get_comentarios(self) -> list[Comentario]:
     try:
-        comentarios_from_db = Comentario.objects.filter(Q(id_topico__name__icontains=self))
+        comentarios_from_db = Comentario.objects.filter(Q(id_topico__name__icontains=self.name))
     except Comentario.DoesNotExist:
         comentarios_from_db = None
 
+    print (comentarios_from_db)
     return comentarios_from_db
 
 def create_topico(self) -> Topico:
@@ -102,7 +99,7 @@ def create_comentario(self) -> Comentario:
 
     comentario, _ = Comentario.objects.get_or_create(
         id_topico=topico,
-        id_usuario_added=usuario,
+        id_usuario_added_id=usuario.id,
         texto=self['comentario']
     )
     return comentario
