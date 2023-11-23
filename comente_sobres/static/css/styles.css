@@ -1,52 +1,293 @@
+html {
+    height: 100%;
+}
+
+header {
+    padding: 14px;
+}
+
 body {
-    background-color: #f5f5f5;
-    font-family: Arial, sans-serif;
+    background-image: linear-gradient(#0D0D0D, #262226);
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 8%;
+    color: #D9D9D9;
+
+}
+
+a {
+    color: #D9D9D9;
+    text-decoration: none;
+}
+
+li {
+    padding: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    margin: 0 auto;
+    margin-top: 10%;
+    width: 70%;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #3B233D;
+    color: #D9D9D9;
+    font-weight: bold;
+
+}
+
+.Logo {
+    margin: 40px;
+    text-align: center;
+
+}
+
+.Pesquisa {
+    text-align: center;
+
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #333333;
-}
+input {
 
-p {
-    color: #666666;
-    background-color: #ffffff;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-}
-
-p:hover {
-    background-color: #f0f0f0;
-}
-
-.erro-text {
-    color: red;
+    border-radius: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
     font-weight: bold;
+    background-color: #D9D9D9;
+    color: #1A1A1A;
+
+
 }
 
-.info-text {
-    color: gray;
+.Pesquisa input {
+    width: 50%;
+
+
+}
+
+button {
+    border-radius: 30px;
+    padding: 0px 30px;
+    height: 30px;
+    border: none;
+    outline: none;
     font-weight: bold;
+    background-color: #D9D9D9;
+    color: #1A1A1A;
 }
 
-.success-text {
-    color: green;
-    font-weight: bold;
+button:hover {
+    background-color: #663D99;
+    color: #D9D9D9;
 }
 
-.msg-result {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
+.criarTopico {
     text-align: center;
-    padding: 10px 0;
+
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.listaTopicos {
+    display: none;
+}
+
+
+.headerTopico {
+    text-align: center;
+}
+
+.comentar {
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 0 30px;
+    height: 30px;
+    font-weight: bold;
+    background-color: #663D99;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    font-size: 16px;
+
+}
+
+.comentar:hover {
+    color: #1A1A1A;
+    cursor: pointer;
+    background-color: #BDB3FF;
+    width: 50%;
+}
+
+.comentar a:hover {
+
+    text-decoration: none;
+}
+
+.comentando {
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 40px;
+    font-weight: bold;
+    background-color: #3B233D;
+    width: 100%;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+
+.comentando p{
+    float: left;
+}
+
+
+.comentando textarea {
+    border-radius: 20px;
+    width: 100%;
+    height: 50%;
+}
+
+.comentando .input {
+    padding: 15px 0;
+}
+
+.comentando input {
+    width: 90%;
+    float: right;
+}
+
+hr.hrSolid {
+    width: 80%;
+}
+
+.opcoes {
+    padding: 20px;
+    text-align: right;
+}
+
+.comentario {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #3B233D;
+    color: #D9D9D9;
+}
+
+.comentario h3 {
+    color: #BDB3FF;
+}
+
+.comentario .coment {
+    font-size: 16px;
+    margin: 25px 50px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    height: auto;
+
+}
+
+.LikeData {
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+.like a {
+    text-decoration: none;
+
+
+}
+
+.like:hover {
+    cursor: pointer;
+    color: #BDB3FF;
+}
+
+
+.material-symbols-outlined {
+    margin-left: 50px;
+    vertical-align: text-bottom;
+
+    font-variation-settings:
+        'FILL'0,
+        'wght'600,
+        'GRAD'0,
+        'opsz'24
+}
+
+
+.data {
+    color: #BDB3FF;
+    text-align: right;
+
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.footer {
+    margin-top: 75px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+
+}
+
+.footer .logo {
+    position: relative;
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.footer a {
+    display: block;
+    color: #D9D9D9;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 25px;
+    border-radius: 4px;
+
+}
+
+.footer .tag {
+    text-align: left;
+}
+
+.footer .links {
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: unset;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.footer-center {
+    display: grid;
+    justify-items: center;
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    margin: 0px 20%;
 }
 
 .btn-result {
-    background-color: #4CAF50; /* Verde */
-    color: white;
+    background-color: mediumpurple;
+    color: black;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -55,66 +296,62 @@ p:hover {
     margin: 4px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
-    border: 2px solid #4CAF50;
+    border: 2px solid #0D0D0D
 }
 
 .btn-result:hover {
-    background-color: white; 
+    background-color: #BDB3FF;
     color: black;
-    border: 2px solid #4CAF50;
-    
-}
-
-.btn-search {
-    background-color: purple; /* Roxo */
-    border: none;
-    color: white;
-    padding: 10px 20px; /* Reduzir o padding para tornar o botão um pouco menor */
-    text-align: center;
+    border: 2px solid #0D0D0D;
     text-decoration: none;
-    display: block; /* Mudar para block para ocupar toda a largura disponível */
-    font-size: 14px; /* Reduzir o tamanho da fonte */
-    margin: 10px 0; /* Aumentar a margem vertical e remover a margem horizontal */
-    cursor: pointer;
-    transition-duration: 0.4s;
-    float: right;
-}
-
-.btn-search:hover {
-    background-color: #800080; /* Mudar a cor de fundo para um roxo mais escuro ao passar o mouse */
-    color: white;
-    border: 2px solid black;
-}
-
-.btn-create {
-    background-color: purple; /* Roxo */
-    border: none;
-    color: white;
-    padding: 10px 20px; /* Reduzir o padding para tornar o botão um pouco menor */
-    text-align: center;
-    text-decoration: none;
-    display: block; /* Mudar para block para ocupar toda a largura disponível */
-    font-size: 14px; /* Reduzir o tamanho da fonte */
-    margin: 10px 0; /* Aumentar a margem vertical e remover a margem horizontal */
-    cursor: pointer;
-    transition-duration: 0.4s;
-    float: right;
-}
-
-.btn-create:hover {
-    background-color: #800080; /* Mudar a cor de fundo para um roxo mais escuro ao passar o mouse */
-    color: white;
-    border: 2px solid black;
-}
-
-ul {
-    max-height: 600px; /* Ajuste este valor de acordo com suas necessidades */
-    overflow-y: auto;
 }
 
 .creator-name {
-    color: #333;
+    color: white;
     font-size: 14px;
     font-style: italic;
     font-weight: bold;
+}
+
+.msg-result {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.success-text {
+    color: green;
+    font-weight: bold;
+}
+
+.erro-text {
+    color: red;
+    font-weight: bold;
+}
+
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.search{
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 40px;
+    font-weight: bold;
+    background-color: #3B233D;
+    width: 70%;
+    transition: 0.5s;
+    font-size: 20px;
+}
+
+button.close:hover, button.btn.btn-secondary:hover{
+    background-color: rgb(228, 87, 71);
 }

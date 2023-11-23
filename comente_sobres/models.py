@@ -18,7 +18,7 @@ class Topico(models.Model):
         return self.name
     
 class Comentario(models.Model):
-    valor = models.TextField()
+    texto = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
     curtidas = models.IntegerField(default=0)
     id_usuario_added = models.ForeignKey(Usuario, on_delete=models.CASCADE)

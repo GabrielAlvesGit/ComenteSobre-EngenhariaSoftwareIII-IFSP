@@ -8,90 +8,97 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
     {% load static %}
-    <link href="{% static '/css/styles.css' %}" rel="stylesheet">
     <script src="{% static '/js/main.js' %}"></script>
+    <link href="{% static '/css/styles.css' %}" rel="stylesheet">
 
     <title>Comente-sobre</title>
 
 </head>
 
-<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+<body>
 
-    <div>
-        <form action="/comente-sobre/search" method="POST">
-            {% csrf_token %}
-            <div class="mb-3 text-center">
-                <label class="form-label">
-                    <legend>O que deseja comentar?</legend>
-                </label>
-                <textarea class="form-control" style="resize: none;" name="topico" id="topico" rows="3"></textarea>
-            </div>
-            <button type="button" class="btn btn-search" data-bs-toggle="modal" data-bs-target="#exampleModal">Criar
-                novo</button>
-        </form>
-    </div>
+    <div class="main">
 
-    <br>
-    <br>
-    <br>
-
-    <div>
-        <ul>
-            {% for topico in topicos %}
-            <a href="{% url 'home_with_param' topico=topico.name msg=msg %}" class="btn btn-result">{{ topico.name }}</a>
-            <p>Por: <span class="creator-name">{{ topico.usuario_added.name }} -> {{topico.usuario_added.email}}</span>
-            </p>
-            {% endfor %}
-        </ul>
-        {% if quantidade %}
         <div class="msg-result">
+            {% if quantidade %}
             <p class="success-text">{{quantidade}} resultado(s) de 50 possíveis
                 <br>
                 <span>caso necessário refine a busca.</span>
             </p>
+            {% endif %}
+            {% if erro %}
+            <p class="erro-text">{{ erro }}</p>
+            {% endif %}
         </div>
-        {% endif %}
+
+        <div class="Logo">
+            <img src="{% static '/img/logo.png' %}" height="80px" alt="Logo">
+        </div>
+
+        <div class="Pesquisa">
+            <h2>Qual tópico deseja pesquisar?</h2>
+            <div class="BPesquisa">
+                <form action="/comente-sobre/search" method="GET">
+                    <input type="text" name="topico" placeholder="Buscar tópicos...">
+                    <button class="submit" onclick="Ver(event)">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="criarTopico">
+            <a>Não achou o que procura?</a>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#topicoModal">Criar novo</button>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div id="lista_topicos">
+            <h2>Tópicos Recentes</h2>
+            <ul>
+                {% for topico in topicos %}
+                    <a href="{% url 'home_with_param' topico=topico %}" class="btn btn-result">{{ topico.name }}</a>
+                    <p>Por: <span class="creator-name">{{ topico.usuario_added.name }} -> {{topico.usuario_added.email}}</span></p>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
-    <div class="msg-result">
-        {% if erro %}
-        <p class="erro-text">{{ erro }}</p>
-        {% endif %}
-    </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Novo Tópico</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="/comente-sobre/create-topic" method="post">
-                        {% csrf_token %}
-                        <div class="mb-3">
-                            <label for="topico" class="form-label">Tópico</label>
-                            <input type="text" class="form-control" name="topico">
-                        </div>
-                        <div class="mb-3">
-                            <label for="nome" class="form-label">Nome</label>
-                            <input type="text" class="form-control" name="nome">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" name="email">
-                        </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="submit" class="btn btn-primary">Salvar</button>
-                        </div>
-                    </form>
+        <!-- Modal -->
+        <div class="modal fade" id="topicoModal" tabindex="-1" aria-labelledby="topicoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content search">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="topicoModalLabel">Novo Tópico</h5>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/comente-sobre/search" method="POST">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="topico" class="form-label">Tópico</label>
+                                <input type="text" class="form-control" name="topico" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" name="nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="submit" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 </body>
 
