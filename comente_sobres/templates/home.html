@@ -18,46 +18,64 @@
 <body>
 
     <header>
-        <img src="{% static '/img/logo.png' %}" height="40px" alt="Logo">
+        <a href="/comente-sobre/search"><img src="{% static '/img/logo.png' %}" height="40px" alt="Logo"></a>
     </header>
 
     {% if topico %}
     <div class="headerTopico">
-        <a href="/comente-sobre/search?topico={{topico}}"><h1>Tópico: {{topico}}</h1></a>
-        <div id="comentar" class="comentar" data-bs-toggle="modal" data-bs-target="#comentarioModal">Sobre o que deseja comentar?</div>
+        <a href="/comente-sobre/search?topico={{topico}}">
+            <h1>Tópico: {{topico}}</h1>
+        </a>
+        <div id="comentar" class="comentar" data-bs-toggle="modal" data-bs-target="#comentarioModal">Sobre o que deseja
+            comentar?</div>
     </div>
     {% endif %}
 
     <hr class="hrSolid">
 
-    
+
     <div class="comentarios">
-        <div class="opcoes">
-            <button onclick="sortComments('latest')">Ordenar por Mais Recentes</button>
-            <button onclick="sortComments('popular')">Ordenar por Mais Populares</button>
+        <div class="opcoes form-container">
+            <form action="/comente-sobre/home/{{topico}}" method="GET">
+                   <select name="order" id="orderSelect" onchange="handleSelectionChange()">
+                    <option value="recente" {% if order == 'recente' %}selected{% endif %}>Mais Recentes</option>
+                    <option value="popular" {% if order == 'popular' %}selected{% endif %}>Mais Populares</option>
+                    <option value="usuario" {% if order == 'usuario' %}selected{% endif %}>Usuário específico</option>
+                </select>
+                <input id="nameUser" type="text" style="display: none;" name="nameUser">
+                <button id="buttonSubmit" type="submit" style="display: none;">Ordenar</button>
         </div>
+        </form>
+    </div>
 
-        {% for comentario in comentarios %}
-        <ul>
-            <div class="comentario">
-                <h3>{{ comentario.id_usuario_added.name }} - Email: {{comentario.id_usuario_added.email}}</h3>
-                <hr>
-                <div class="coment">{{ comentario.texto }}
-                </div>
-                <hr>
-
-                <div class="LikeData">
-                    <div class="like">
-                        <i class="bi bi-heart"></i>
-                    </div>
-                    <div class="data">{{ comentario.date_added }}</div>
-                </div>
+    {% for comentario in comentarios %}
+    <ul>
+        <div class="comentario">
+            <h3>{{ comentario.id_usuario_added.name }} - Email: {{comentario.id_usuario_added.email}}</h3>
+            <hr>
+            <div class="coment">{{ comentario.texto }}
             </div>
-        </ul>
-        {% endfor %}
+            <hr>
+
+            <div class="LikeData">
+                <div class="like">
+                    <form action="/comente-sobre/home" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" name="curtida" class="like-button" value="True">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                        <span>{{ comentario.curtidas }}</span>
+                        <input type="hidden" name="id_comentario" value="{{ comentario.id }}">
+                    </form>
+                </div>
+                <div class="data">{{ comentario.date_added }}</div>
+            </div>
+        </div>
+    </ul>
+    {% endfor %}
 
     </div>
-    
+
 
     <footer id="footer" class="footer">
         <a class="logo" href="#">Comente Sobre</a>
@@ -79,41 +97,41 @@
 
 
     <!-- Modal -->
-        <!-- Modal -->
-        <div class="modal fade" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content comentando">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="comentarioModalLabel">Novo Tópico</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form action="/comente-sobre/home" method="POST">
-                            {% csrf_token %}
-                            <div class="mb-4">
-                                <textarea name="comentario" rows="8">
-                                </textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" name="nome" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" name="email" required>
-                            </div>
-                            <input type="hidden" name="topico" value="{{ topico.id }}">
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                <button type="submit" class="btn btn-primary">Publicar</button>
-                            </div>
-                        </form>
-                    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="comentarioModal" tabindex="-1" aria-labelledby="comentarioModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content comentando">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="comentarioModalLabel">Novo Tópico</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/comente-sobre/home" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-4">
+                            <textarea name="comentario" rows="8" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" required>
+                        </div>
+                        <input type="hidden" name="topico" value="{{ topico.id }}">
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-primary">Publicar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
 </body>
 
 </html>

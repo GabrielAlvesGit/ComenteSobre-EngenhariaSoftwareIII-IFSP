@@ -54,6 +54,7 @@
         <br>
         <br>
 
+        {% if topicos|length > 0 %}
         <div id="lista_topicos">
             <h2>Tópicos Recentes</h2>
             <ul>
@@ -63,6 +64,7 @@
                 {% endfor %}
             </ul>
         </div>
+        {% endif %}
     </div>
 
         <!-- Modal -->
