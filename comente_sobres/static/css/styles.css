@@ -7,16 +7,15 @@ header {
 }
 
 body {
-    background-image: linear-gradient(#0D0D0D, #262226);
+    background-image: linear-gradient(#0d0d0d, #262226);
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 8%;
-    color: #D9D9D9;
-
+    color: #d9d9d9;
 }
 
 a {
-    color: #D9D9D9;
+    color: #d9d9d9;
     text-decoration: none;
 }
 
@@ -34,16 +33,14 @@ a:hover {
     width: 70%;
     padding: 40px;
     border-radius: 20px;
-    background-color: #3B233D;
-    color: #D9D9D9;
+    background-color: #3b233d;
+    color: #d9d9d9;
     font-weight: bold;
-
 }
 
 .Logo {
     margin: 40px;
     text-align: center;
-
 }
 
 .Pesquisa {
@@ -53,22 +50,18 @@ a:hover {
 }
 
 input {
-
     border-radius: 30px;
     height: 30px;
+    width: 50%;
     border: none;
     outline: none;
     font-weight: bold;
-    background-color: #D9D9D9;
-    color: #1A1A1A;
-
-
+    background-color: #d9d9d9;
+    color: #1a1a1a;
 }
 
 .Pesquisa input {
     width: 50%;
-
-
 }
 
 button {
@@ -78,13 +71,13 @@ button {
     border: none;
     outline: none;
     font-weight: bold;
-    background-color: #D9D9D9;
-    color: #1A1A1A;
+    background-color: #d9d9d9;
+    color: #1a1a1a;
 }
 
 button:hover {
-    background-color: #663D99;
-    color: #D9D9D9;
+    background-color: #663d99;
+    color: #d9d9d9;
 }
 
 .criarTopico {
@@ -98,7 +91,6 @@ button:hover {
     display: none;
 }
 
-
 .headerTopico {
     text-align: center;
 }
@@ -109,25 +101,23 @@ button:hover {
     padding: 0 30px;
     height: 30px;
     font-weight: bold;
-    background-color: #663D99;
+    background-color: #663d99;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
     font-size: 16px;
-
 }
 
 .comentar:hover {
-    color: #1A1A1A;
+    color: #1a1a1a;
     cursor: pointer;
-    background-color: #BDB3FF;
+    background-color: #bdb3ff;
     width: 50%;
 }
 
 .comentar a:hover {
-
     text-decoration: none;
 }
 
@@ -136,17 +126,15 @@ button:hover {
     border-radius: 30px;
     padding: 40px;
     font-weight: bold;
-    background-color: #3B233D;
+    background-color: #3b233d;
     width: 100%;
     transition: 0.5s;
     font-size: 20px;
 }
 
-
-.comentando p{
+.comentando p {
     float: left;
 }
-
 
 .comentando textarea {
     border-radius: 20px;
@@ -164,7 +152,6 @@ button:hover {
 }
 
 hr.hrSolid {
-    width: 80%;
 }
 
 .opcoes {
@@ -178,12 +165,12 @@ hr.hrSolid {
     width: 70%;
     padding: 20px;
     border-radius: 20px;
-    background-color: #3B233D;
-    color: #D9D9D9;
+    background-color: #3b233d;
+    color: #d9d9d9;
 }
 
 .comentario h3 {
-    color: #BDB3FF;
+    color: #bdb3ff;
 }
 
 .comentario .coment {
@@ -192,7 +179,6 @@ hr.hrSolid {
     word-wrap: break-word;
     white-space: pre-line;
     height: auto;
-
 }
 
 .LikeData {
@@ -201,35 +187,26 @@ hr.hrSolid {
     grid-template-columns: repeat(2, 1fr);
     font-weight: bold;
     font-size: 20px;
-
 }
 
 .like a {
     text-decoration: none;
-
-
 }
 
 .like:hover {
     cursor: pointer;
-    color: #BDB3FF;
+    color: #bdb3ff;
 }
-
 
 .material-symbols-outlined {
     margin-left: 50px;
     vertical-align: text-bottom;
 
-    font-variation-settings:
-        'FILL'0,
-        'wght'600,
-        'GRAD'0,
-        'opsz'24
+    font-variation-settings: "FILL" 0, "wght" 600, "GRAD" 0, "opsz" 24;
 }
 
-
 .data {
-    color: #BDB3FF;
+    color: #bdb3ff;
     text-align: right;
 
     font-weight: 600;
@@ -241,7 +218,6 @@ hr.hrSolid {
     bottom: 0px;
     background-color: rgba(0, 0, 0, 0);
     transition: 0.5s;
-
 }
 
 .footer .logo {
@@ -253,14 +229,13 @@ hr.hrSolid {
 
 .footer a {
     display: block;
-    color: #D9D9D9;
+    color: #d9d9d9;
     padding: 10px;
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
     line-height: 25px;
     border-radius: 4px;
-
 }
 
 .footer .tag {
@@ -296,13 +271,13 @@ hr.hrSolid {
     margin: 4px 2px;
     cursor: pointer;
     transition-duration: 0.4s;
-    border: 2px solid #0D0D0D
+    border: 2px solid #0d0d0d;
 }
 
 .btn-result:hover {
-    background-color: #BDB3FF;
+    background-color: #bdb3ff;
     color: black;
-    border: 2px solid #0D0D0D;
+    border: 2px solid #0d0d0d;
     text-decoration: none;
 }
 
@@ -341,18 +316,19 @@ hr.hrSolid {
     max-width: 800px;
 }
 
-.search{
+.search {
     margin: 0 auto;
     border-radius: 30px;
     padding: 40px;
     font-weight: bold;
-    background-color: #3B233D;
+    background-color: #3b233d;
     width: 70%;
     transition: 0.5s;
     font-size: 20px;
 }
 
-button.close:hover, button.btn.btn-secondary:hover{
+button.close:hover,
+button.btn.btn-secondary:hover {
     background-color: rgb(228, 87, 71);
 }
 
@@ -363,11 +339,35 @@ button.close:hover, button.btn.btn-secondary:hover{
     cursor: pointer;
 }
 
-.opcoes select{
-    flex: 1;
-    margin-right: 10px;
+.opcoes select {
+    width: 173px;
+    margin-right: 64px;
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
+}
+
+.opcoes.form-container form {
+    display: flex;
+
+    align-items: center;
+}
+
+.userOrderContainer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    margin-left: 20%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#orderSelect {
+    order: 1;
 }

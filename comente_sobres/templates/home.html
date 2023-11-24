@@ -43,8 +43,10 @@
                     <option value="popular" {% if order == 'popular' %}selected{% endif %}>Mais Populares</option>
                     <option value="usuario" {% if order == 'usuario' %}selected{% endif %}>Usuário específico</option>
                 </select>
-                <input id="nameUser" type="text" style="display: none;" name="nameUser">
-                <button id="buttonSubmit" type="submit" style="display: none;">Ordenar</button>
+                <div class="userOrderContainer">
+                    <input id="nameUser" type="text" style="display: none;" name="nameUser">
+                    <button id="buttonSubmit" type="submit" style="display: none;">Ordenar</button>
+                </div>
         </div>
         </form>
     </div>
