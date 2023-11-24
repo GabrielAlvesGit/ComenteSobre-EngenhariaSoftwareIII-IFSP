@@ -59,7 +59,7 @@
             <h2>Tópicos Recentes</h2>
             <ul>
                 {% for topico in topicos %}
-                    <a href="{% url 'home_with_param' topico=topico %}" class="btn btn-result">{{ topico.name }}</a>
+                    <a href="{% url 'home_with_param' nome_topico=topico id_topico=topico.id %}" class="btn btn-result">{{ topico.name }}</a>
                     <p>Por: <span class="creator-name">{{ topico.usuario_added.name }} -> {{topico.usuario_added.email}}</span></p>
                 {% endfor %}
             </ul>

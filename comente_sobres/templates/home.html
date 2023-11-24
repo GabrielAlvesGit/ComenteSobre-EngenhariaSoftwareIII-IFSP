@@ -23,7 +23,7 @@
 
     {% if topico %}
     <div class="headerTopico">
-        <a href="/comente-sobre/search?topico={{topico}}">
+        <a href="/comente-sobre/search?nome_topico={{topico.name}}/id_topico={{topico.id}}">
             <h1>Tópico: {{topico}}</h1>
         </a>
         <div id="comentar" class="comentar" data-bs-toggle="modal" data-bs-target="#comentarioModal">Sobre o que deseja
@@ -36,8 +36,9 @@
 
     <div class="comentarios">
         <div class="opcoes form-container">
-            <form action="/comente-sobre/home/{{topico}}" method="GET">
+            <form action="/comente-sobre/home/{{topico.name}}/{{topico.id}}" method="GET">
                    <select name="order" id="orderSelect" onchange="handleSelectionChange()">
+                    <option value="">---</option>
                     <option value="recente" {% if order == 'recente' %}selected{% endif %}>Mais Recentes</option>
                     <option value="popular" {% if order == 'popular' %}selected{% endif %}>Mais Populares</option>
                     <option value="usuario" {% if order == 'usuario' %}selected{% endif %}>Usuário específico</option>
