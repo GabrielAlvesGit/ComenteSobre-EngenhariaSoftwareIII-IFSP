@@ -37,7 +37,7 @@ class HomePageView(View):
     
     def post(self, request):
         """Cria um comentário no Comente Sobre."""
-        if request.POST.get('comentario') != None and request.POST.get('nome') != None and request.POST.get('email') != None and request.POST.get('topico') != None:
+        if request.POST.get('comentario') != None and request.POST.get('nome') != None and request.POST.get('email') != None and request.POST.get('id_topico') != None:
             comentario = create_comentario(request.POST)
             return redirect('home_with_param', nome_topico=comentario.id_topico.name, id_topico=comentario.id_topico.id)
         
@@ -52,7 +52,7 @@ class HomePageView(View):
 class SearchPageView(View):
     def get(self, request):
         """Página de pesquisa de tópicos do Comente Sobre."""
-        topico = request.GET.get('topico')
+        topico = request.GET.get('nome_topico')
         
         if topico != None:
             topico = unidecode(topico).lower()
@@ -70,7 +70,7 @@ class SearchPageView(View):
 
     def post(self, request):
         """Cria um tópico no Comente Sobre."""
-        if request.POST.get('topico') != None and request.POST.get('nome') != None and request.POST.get('email') != None:
+        if request.POST.get('nome_topico') != None and request.POST.get('nome') != None and request.POST.get('email') != None:
             topico = create_topico(request.POST)
             return redirect('home_with_param', nome_topico=topico.name, id_topico=topico.id)
 
@@ -110,7 +110,7 @@ def create_topico(self) -> Topico:
     )
 
     topico, _ = Topico.objects.get_or_create(
-        name=self['topico'],
+        name=self['nome_topico'],
         usuario_added=usuario
     )
     return topico
@@ -121,7 +121,7 @@ def create_comentario(self) -> Comentario:
         email=self['email']
     )
 
-    topico = Topico.objects.get(id=self['topico'])
+    topico = Topico.objects.get(id=self['id_topico'])
 
     comentario, _ = Comentario.objects.get_or_create(
         id_topico=topico,

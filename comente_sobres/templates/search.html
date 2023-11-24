@@ -39,7 +39,7 @@
             <h2>Qual tópico deseja pesquisar?</h2>
             <div class="BPesquisa">
                 <form action="/comente-sobre/search" method="GET">
-                    <input type="text" name="topico" placeholder="Buscar tópicos...">
+                    <input type="text" name="nome_topico" placeholder="Buscar tópicos...">
                     <button class="submit" onclick="Ver(event)">Buscar</button>
                 </form>
             </div>
@@ -82,7 +82,7 @@
                             {% csrf_token %}
                             <div class="mb-3">
                                 <label for="topico" class="form-label">Tópico</label>
-                                <input type="text" class="form-control" name="topico" required>
+                                <input type="text" class="form-control" name="nome_topico" required>
                             </div>
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>

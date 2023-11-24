@@ -23,7 +23,7 @@
 
     {% if topico %}
     <div class="headerTopico">
-        <a href="/comente-sobre/search?nome_topico={{topico.name}}/id_topico={{topico.id}}">
+        <a href="/comente-sobre/search?nome_topico={{topico.name}}">
             <h1>Tópico: {{topico}}</h1>
         </a>
         <div id="comentar" class="comentar" data-bs-toggle="modal" data-bs-target="#comentarioModal">Sobre o que deseja
@@ -125,7 +125,7 @@
                             <label for="email" class="form-label">Email</label>
                             <input type="email" class="form-control" name="email" required>
                         </div>
-                        <input type="hidden" name="topico" value="{{ topico.id }}">
+                        <input type="hidden" name="id_topico" value="{{ topico.id }}">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                             <button type="submit" class="btn btn-primary">Publicar</button>
