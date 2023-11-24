@@ -2,11 +2,11 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views import View
 from unidecode import unidecode
+import unicodedata
 from .models import Topico
 from .models import Usuario
 from .models import Comentario
 from django.db.models import Q
-from django.http import JsonResponse
 
 SEARCH_TEMPLATE = 'search.html'
 HOME_TEMPLATE = 'home.html'
@@ -89,17 +89,17 @@ def get_topicos(self) -> list[Topico]:
 
 def get_comentarios(self) -> list[Comentario]:
     try:
-        comentarios_from_db = Comentario.objects.filter(Q(id_topico__name__icontains=self.name, id_topico__id=self.id)).order_by('-id')
+        comentarios_from_db = Comentario.objects.filter(Q(id_topico__name__icontains=self.name, id_topico__id=self.id)).order_by('date_added')
     except Comentario.DoesNotExist:
         comentarios_from_db = None
 
     return comentarios_from_db
 
-def get_usuario_by_name(self) -> list[Usuario]:
+def get_usuario_by_name(self) -> Usuario:
     try:
         usuario_from_db = Usuario.objects.filter(name__icontains=self)
     except Usuario.DoesNotExist:
-        usuario_from_db = None
+        usuario_from_db = []
 
     return usuario_from_db
 
@@ -135,6 +135,9 @@ def ordenar_comentarios(order, topico, nome_usuario=None):
 
     if order == 'recente':
         return comentarios.order_by('-date_added')
+    
+    if order == 'antigo':
+        return comentarios.order_by('date_added')
 
     if order == 'popular':
         return comentarios.order_by('-curtidas')
