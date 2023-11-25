@@ -1,0 +1,33 @@
+# Ignorar arquivos gerados automaticamente
+.vscode/
+__pycache__/
+*.code-workspace
+
+# Ignorar arquivos de ambiente virtual
+venv/
+env/
+ENV/
+
+# Ignorar arquivos de compilação Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignorar arquivos de registro
+*.log
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+media
+*.cfg
+
+# Environment files
+.env
+.venv/
