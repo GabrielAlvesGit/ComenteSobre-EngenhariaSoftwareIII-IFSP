@@ -3,7 +3,7 @@ from comente_sobres.models import Topico
 from .views import HomePageView, SearchPageView
 
 class TopicoConverter:
-    regex = '[^/]+-\d+'
+    regex = r'[^/]+-\d+'
 
     def to_python(self, value):
         topico_name, topico_id = value.split('-')
