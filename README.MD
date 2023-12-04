@@ -126,3 +126,4 @@ $ python manage.py runserver localhost:8080
 <a href="https://drive.google.com/file/d/1w2LQmQyTYlJYoBaClqsYu-y8tPNIlilT/view?usp=sharing">Documentação Jira <img src="./comente_sobres/static/img/iconAcimaDireitaBlue.png" alt="Imagem Seta A Direita Blue" style="width: 12px; height: 12px; "></a>
 
 ## 💻 Layout Django
+https://github.com/GabrielAlvesGit/teste/assets/102634725/5aef7d03-7301-49ab-8c61-90eaedf3e8c0
