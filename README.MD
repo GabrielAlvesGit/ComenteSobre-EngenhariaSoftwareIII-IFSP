@@ -7,10 +7,6 @@
 
 # Engenharia de Software III - Comente-Sobre
 
-<h1 align="center">
-  <a href="#">website view <img src="./comente_sobres/static/img/iconAcimaDireitaBlue.png" alt="Imagem/Icone seta a direita blue" style="width: 20px; height: 20px; margin-left: 5px;"></a>
-</h1>
-
 ## Informações Gerais
 
 <!-- Informações do curso e professor -->
@@ -48,9 +44,11 @@ Thanks goes to these wonderful people:
 <table align="center">
   <tr>
     <tr>
-    <td align="center"><a href="https://github.com/CaioARL"><img alt="Imagem Perfil Caio" src="https://avatars.githubusercontent.com/u/89604540?v=4" width="100px" alt="Foto de Perfil"/><br/><sub><b>Caio Arruda</b></sub></a><br /><a href="https://github.com/CaioARL" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="#" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
-    <td align="center"><a href="https://github.com/GabrielAlvesGit"><img alt="Imagem Perfil Gabriel J" src="https://media.licdn.com/dms/image/D4D03AQG3yPiVBZ1NOA/profile-displayphoto-shrink_200_200/0/1695753526127?e=1707350400&v=beta&t=l4LXp9O2Txf7NwAFJd4f4z2l9Y97ONa0xvlQDFmUtdk" width="100px" alt="Foto de Perfil"/><br/><sub><b>Gabriel Josué</b></sub></a><br /><a href="https://github.com/GabrielAlvesGit" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="https://www.linkedin.com/in/gabrielalv3s/" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
+   <td align="center"><a href="https://github.com/CaioARL"><img alt="Imagem Perfil Caio" src="https://avatars.githubusercontent.com/u/89604540?v=4" width="100px" alt="Foto de Perfil"/><br/><sub><b>Caio Arruda</b></sub></a><br /><a href="https://github.com/CaioARL" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="#" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
+    <td align="center"><a href="#"><img alt="Imagem Perfil Gabriel Abreu" src="https://media.licdn.com/dms/image/D4D35AQH19MuZk1K1ng/profile-framedphoto-shrink_200_200/0/1660522358732?e=1702256400&v=beta&t=cFh4MedKe_5dw54JCKtIU-mF0jLlZQN1n-6Kg0ccHik" width="100px" alt="Foto de Perfil"/><br/><sub><b>Gabriel Abreu</b></sub></a><br /><a href="#" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="https://www.linkedin.com/in/gababreu/" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
+    <td align="center"><a href="https://github.com/GabrielAlvesGit"><img alt="Imagem Perfil Gabriel Josué" src="https://media.licdn.com/dms/image/D4D03AQG3yPiVBZ1NOA/profile-displayphoto-shrink_200_200/0/1695753526127?e=1707350400&v=beta&t=l4LXp9O2Txf7NwAFJd4f4z2l9Y97ONa0xvlQDFmUtdk" width="100px" alt="Foto de Perfil"/><br/><sub><b>Gabriel Josué</b></sub></a><br /><a href="https://github.com/GabrielAlvesGit" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="https://www.linkedin.com/in/gabrielalv3s/" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
     <td align="center"><a href="https://github.com/GuiSSant"><img alt="Imagem Perfil Guilherme" src="https://avatars.githubusercontent.com/u/112914616?v=4" width="100px" alt="Foto de Perfil"/><br/><sub><b>Guilherme Santana</b></sub></a><br /><a href="https://github.com/GuiSSant" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="https://www.linkedin.com/in/guilherme-santana-52402518a/" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
+    <td align="center"><a href="https://github.com/jhomarcelo"><img alt="Imagem Perfil Jhonatan" src="https://media.licdn.com/dms/image/D4D03AQEcR3byn2hQsg/profile-displayphoto-shrink_200_200/0/1678246070796?e=1707350400&v=beta&t=c6_StHpvxHcPQoC0FgKSCYoBzVNb8cjxoobvzACiNBc" width="100px" alt="Foto de Perfil"/><br/><sub><b>Jhonatan Marcelo</b></sub></a><br /><a href="https://github.com/jhomarcelo" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="https://www.linkedin.com/in/jhonatan-marcelo/" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td>
     <td align="center"><a href="https://github.com/c0zyhug"><img alt="Imagem Perfil Kayan" src="https://media.licdn.com/dms/image/D4D03AQH6sc2zHPDjdQ/profile-displayphoto-shrink_800_800/0/1681176003282?e=1707350400&v=beta&t=a7mB7KrvEAlPG-qgxFRfEILLZ5Ei6u4Q4bc1axAhzM4" width="100px" alt="Foto de Perfil"/><br/><sub><b>Kayan Garbi</b></sub></a><br /><a href="https://github.com/c0zyhug" title="GitHub"><img align="center" alt="GitHub" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"></a><a href="https://www.linkedin.com/in/kayangarbi/" title="Linkedin"><img align="center" alt="Imagem Linkedin" height="30" width="26" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a></td> 
   </tr>
 </table>
@@ -95,7 +93,7 @@ Link: https://www.python.org/downloads/
 
 <pre>
 # Clone o repository
-$ git clone https://github.com/GabrielAlvesGit/AmazonScraperNode.js.git
+$ git clone https://github.com/GabrielAlvesGit/ComenteSobre-EngenhariaSoftwareIII-IFSP.git
 </pre>
 
 <pre>
